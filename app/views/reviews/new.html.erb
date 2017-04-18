@@ -1,0 +1,9 @@
+<%= form_for [@product,@review] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :review %>
+  <%= f.text_field :review %>
+  <%= f.label :place %>
+  <%= f.text_field :place %>
+  <%= f.submit "投稿" %>
+<% end %>

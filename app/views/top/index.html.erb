@@ -1,0 +1,17 @@
+<ul>
+  <% @products.each do |product| %>
+  <div class="index">
+    <li>商品名：<%= product.name %></li>
+    <li>カテゴリー：<%= product.category %></li>
+    <li>サブカテゴリー：<%= product.subcategory %></li>
+    <li>内容：<%= product.content %></li>
+    <li>値段：<%= product.price %>ks</li>
+    <%= link_to '口コミする', new_product_review_path(product.id) %>
+    <% product.reviews.each do |review| %>
+      <li><%= review.title %></li>
+    <% end %>
+  </div>
+
+  <% end %>
+
+</ul>

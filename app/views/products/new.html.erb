@@ -1,0 +1,9 @@
+<%= form_for (@product) do |f| %>
+  <%= f.label :商品名 %>
+  <%= f.text_field :name %>
+  <%= f.text_field :category %>
+  <%= f.text_field :subcategory %>
+  <%= f.text_field :content %>
+  <%= f.number_field :price %>
+  <%= f.submit '登録する' %>
+<% end %>
